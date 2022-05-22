@@ -2,13 +2,14 @@ import React from 'react';
 import Footer from '../Footer';
 import Navbar from '../Navbar/Navbar';
 import Banner from './Banner';
+import Parts from './Parts/Parts';
 
 const Home = () => {
     return (
         <div className='px-12'>
             <Navbar></Navbar>
             <Banner></Banner>
-            <h1>Home</h1>
+            <Parts></Parts>
             <Footer></Footer>
         </div>
     );

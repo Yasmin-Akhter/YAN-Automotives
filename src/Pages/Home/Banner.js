@@ -3,10 +3,12 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='banner h-[500px] '
+        <div className='banner h-[500px]  bg-no-repeat shadow-xl'
             style={{
 
-                backgroundImage: `url("https://media.ford.com/content/dam/fordmedia/North%20America/US/2017/09/21/HoloLensLoop.gif")`
+                backgroundImage: `url("https://media.ford.com/content/dam/fordmedia/North%20America/US/2017/09/21/HoloLensLoop.gif")`,
+                backgroundSize: 'cover',
+
             }}>
 
 
