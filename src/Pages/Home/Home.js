@@ -2,6 +2,7 @@ import React from 'react';
 import Footer from '../Footer';
 import Navbar from '../Navbar/Navbar';
 import Banner from './Banner';
+import NewsLetter from './NewsLetter';
 import Parts from './Parts/Parts';
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <Parts></Parts>
+            <NewsLetter></NewsLetter>
             <Footer></Footer>
         </div>
     );
