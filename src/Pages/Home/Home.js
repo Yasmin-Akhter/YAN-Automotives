@@ -5,6 +5,7 @@ import Banner from './Banner';
 import BusinessSummery from './BusinessSummery/BusinessSummery';
 import Charts from './BusinessSummery/Charts';
 import NewsLetter from './NewsLetter';
+import OurLocations from './OurLocations';
 import Parts from './Parts/Parts';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <Parts></Parts>
+            <OurLocations></OurLocations>
             <BusinessSummery></BusinessSummery>
 
             <NewsLetter></NewsLetter>
