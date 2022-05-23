@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../Footer';
 import Navbar from '../Navbar/Navbar';
 import Banner from './Banner';
-import BusinessSummery from './BusinessSummery';
+import BusinessSummery from './BusinessSummery/BusinessSummery';
 import NewsLetter from './NewsLetter';
 import Parts from './Parts/Parts';
 
