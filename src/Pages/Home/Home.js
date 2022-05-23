@@ -3,6 +3,7 @@ import Footer from '../Footer';
 import Navbar from '../Navbar/Navbar';
 import Banner from './Banner';
 import BusinessSummery from './BusinessSummery/BusinessSummery';
+import Charts from './BusinessSummery/Charts';
 import NewsLetter from './NewsLetter';
 import Parts from './Parts/Parts';
 
@@ -13,6 +14,7 @@ const Home = () => {
             <Banner></Banner>
             <Parts></Parts>
             <BusinessSummery></BusinessSummery>
+
             <NewsLetter></NewsLetter>
             <Footer></Footer>
         </div>
