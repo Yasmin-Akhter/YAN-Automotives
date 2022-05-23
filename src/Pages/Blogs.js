@@ -1,13 +1,12 @@
 import React from 'react';
 
-
-
-const Epp = () => {
+const Blogs = () => {
     return (
         <div>
-            <h1>Epp</h1>
+            <h1>Blogs</h1>
+
         </div>
     );
 };
 
-export default Epp;
+export default Blogs;

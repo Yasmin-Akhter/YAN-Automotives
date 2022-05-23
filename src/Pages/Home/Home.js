@@ -7,14 +7,16 @@ import Charts from './BusinessSummery/Charts';
 import NewsLetter from './NewsLetter';
 import OurLocations from './OurLocations';
 import Parts from './Parts/Parts';
+import Products from './Products';
 import Reviews from './Reviews';
 
 const Home = () => {
     return (
         <div className='px-12'>
-            <Navbar></Navbar>
+
             <Banner></Banner>
-            <Parts></Parts>
+            {/* <Parts></Parts> */}
+            <Products></Products>
             <OurLocations></OurLocations>
             <BusinessSummery></BusinessSummery>
             <Reviews></Reviews>
