@@ -13,7 +13,7 @@ import Reviews from './Reviews';
 const Home = () => {
     return (
         <div className='px-12'>
-
+            <Navbar></Navbar>
             <Banner></Banner>
             {/* <Parts></Parts> */}
             <Products></Products>

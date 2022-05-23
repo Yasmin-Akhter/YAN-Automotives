@@ -10,11 +10,14 @@ import Blogs from './Pages/Blogs';
 import Dashboard from './Pages/Dashboard';
 import Navbar from './Pages/Navbar/Navbar';
 import NotFound from './Pages/NotFound';
+import MyProfile from './Pages/MyProfile';
+import AddReview from './Pages/AddReview';
+import MyOrder from './Pages/MyOrder';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+
 
       <Routes>
         <Route path="/" element={<Home></Home>} ></Route>
@@ -22,11 +25,20 @@ function App() {
           <Purchase></Purchase>
         </RequireAuth>}
         ></Route>
+        <Route path="/purchase/:id" element={<RequireAuth>
+          <Purchase></Purchase>
+        </RequireAuth>}
+        ></Route>
+
 
         <Route path="/login" element={<Login></Login>} ></Route>
         <Route path="/signup" element={<SignUp></SignUp>} ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>} ></Route>
-        <Route path="/dashboard" element={<Dashboard></Dashboard>} ></Route>
+        <Route path="/dashboard" element={<Dashboard></Dashboard>} >
+          <Route index element={<MyProfile></MyProfile>}></Route>
+          <Route path='add-review' element={<AddReview></AddReview>}></Route>
+          <Route path='my-order' element={<MyOrder></MyOrder>}></Route>
+        </Route>
         <Route path="*" element={<NotFound></NotFound>} ></Route>
       </Routes>
 
