@@ -7,6 +7,7 @@ import Charts from './BusinessSummery/Charts';
 import NewsLetter from './NewsLetter';
 import OurLocations from './OurLocations';
 import Parts from './Parts/Parts';
+import Reviews from './Reviews';
 
 const Home = () => {
     return (
@@ -16,7 +17,7 @@ const Home = () => {
             <Parts></Parts>
             <OurLocations></OurLocations>
             <BusinessSummery></BusinessSummery>
-
+            <Reviews></Reviews>
             <NewsLetter></NewsLetter>
             <Footer></Footer>
         </div>

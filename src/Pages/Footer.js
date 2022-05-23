@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer class="footer footer-center p-10 bg-purple-300 text-base-content rounded">
+        <footer class="footer footer-center p-10 bg-cyan-100 text-base-content rounded">
             <div class="grid grid-flow-col gap-4">
                 <a class="link link-hover">About us</a>
                 <a class="link link-hover">Contact</a>
@@ -17,7 +17,7 @@ const Footer = () => {
                 </div>
             </div>
             <div>
-                <p>Copyright © 2022 - All right reserved by ACME Industries Ltd</p>
+                <p>Copyright © 2022 - All right reserved </p>
             </div>
         </footer>
     );
