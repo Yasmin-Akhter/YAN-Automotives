@@ -20,18 +20,18 @@ const Purchase = () => {
         <div>
             <Navbar></Navbar>
             <div>
-                <div class="card w-96 bg-base-100 shadow-xl mx-auto">
-                    <figure class="px-10 pt-10">
-                        <img src={details.picture} alt="" class="rounded-xl" />
+                <div className="card w-96 bg-base-100 shadow-xl mx-auto">
+                    <figure className="px-10 pt-10">
+                        <img src={details.picture} alt="" className="rounded-xl" />
                     </figure>
-                    <div class="card-body items-center text-center">
-                        <h1 class="card-title text-5xl font-bold">{details.name}</h1>
-                        <p class="py-6">{details.des}</p>
+                    <div className="card-body items-center text-center">
+                        <h1 className="card-title text-5xl font-bold">{details.name}</h1>
+                        <p className="py-6">{details.des}</p>
                         <p className='font-bold'>Price: {details.price}tk/unit</p>
                         <p className='font-bold'>Minimum Order:{details.minimumOrder}</p>
                         <p className='font-bold'>Available:{details.available}</p>
-                        <div class="card-actions">
-                            <button class="btn btn-primary">Buy Now</button>
+                        <div className="card-actions">
+                            <button className="btn btn-primary">Buy Now</button>
                         </div>
                     </div>
                 </div>

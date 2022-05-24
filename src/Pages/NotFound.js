@@ -10,7 +10,7 @@ const NotFound = () => {
                 backgroundSize: 'cover'
 
             }}>
-            <Link to="/"> <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg my-2 font-extrabold">HOME</button></Link>
+            <Link to="/"> <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg my-2 font-extrabold">HOME</button></Link>
 
         </div >
     );
