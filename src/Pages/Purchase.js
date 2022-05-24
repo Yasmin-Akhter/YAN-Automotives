@@ -20,14 +20,18 @@ const Purchase = () => {
         <div>
             <Navbar></Navbar>
             <div>
-
-                <div class="hero min-h-screen bg-base-200">
-                    <div class="hero-content flex-col lg:flex-row">
-                        <img src={details.picture} alt="" />
-                        <div>
-                            <h1 class="text-5xl font-bold">{details.name}</h1>
-                            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                            <button class="btn btn-primary">Purchase</button>
+                <div class="card w-96 bg-base-100 shadow-xl mx-auto">
+                    <figure class="px-10 pt-10">
+                        <img src={details.picture} alt="" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                        <h1 class="card-title text-5xl font-bold">{details.name}</h1>
+                        <p class="py-6">{details.des}</p>
+                        <p className='font-bold'>Price: {details.price}tk/unit</p>
+                        <p className='font-bold'>Minimum Order:{details.minimumOrder}</p>
+                        <p className='font-bold'>Available:{details.available}</p>
+                        <div class="card-actions">
+                            <button class="btn btn-primary">Buy Now</button>
                         </div>
                     </div>
                 </div>

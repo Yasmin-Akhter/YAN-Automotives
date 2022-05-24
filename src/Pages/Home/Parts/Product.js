@@ -10,7 +10,7 @@ const Product = ({ product }) => {
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{product.name}</h2>
                 <p>{product.des}</p>
-                <p className='font-bold'>Price:{product.price} tk<small>/per unit</small> </p>
+                <p className='font-bold'>Price:{product.price} tk<small>/unit</small> </p>
                 <div class="card-actions">
                     <Link to={`/purchase/${product._id}`}><button class="btn btn-primary">Buy Now</button></Link>
                 </div>
