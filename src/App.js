@@ -15,6 +15,7 @@ import AddReview from './Pages/AddReview';
 import MyOrder from './Pages/MyOrder';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
+import ResetPassword from './Pages/ResetPassword';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         ></Route>
         <Route path="/login" element={<Login></Login>} ></Route>
         <Route path="/signup" element={<SignUp></SignUp>} ></Route>
+        <Route path="/password-reset" element={<ResetPassword></ResetPassword>} ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>} ></Route>
         <Route path="/dashboard" element={<Dashboard></Dashboard>} >
           <Route index element={<MyProfile></MyProfile>}></Route>

@@ -28,10 +28,10 @@ const MyProfile = () => {
                         </div>
                     </div>
                     <h1 className=' text-3xl font-bold'>{user.displayName}</h1>
-                    <p className='text-xl'>email:{user.email}</p>
-                    <p className='text-xl'>{updatedInfo.phone}</p>
-                    <p className='text-xl'>{updatedInfo.location}</p>
-                    <p className='text-xl'>{updatedInfo.link}</p>
+                    <p >{user.email}</p>
+                    <p >{updatedInfo.phone}</p>
+                    <p >{updatedInfo.location}</p>
+                    <p>{updatedInfo.link}</p>
                     <div className="card-actions justify-center">
 
                         <label for="profileModal" onClick={() => setUpdateProfile(user)} className="btn btn-primary">Update Profile</label>

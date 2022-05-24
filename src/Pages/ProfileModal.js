@@ -45,6 +45,7 @@ const ProfileModal = ({ updateProfile, setUpdateProfile, setUpdateInfo }) => {
                 console.error('Error:', error);
             });
 
+
     }
     return (
         <div>

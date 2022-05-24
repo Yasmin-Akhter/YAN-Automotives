@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Navbar from './Navbar/Navbar';
-import PlaceOrder from './PlaceOrder';
+import PurchaseModal from './PurchaseModal';
 
 const Purchase = () => {
     const { id } = useParams();
@@ -33,16 +33,19 @@ const Purchase = () => {
                         <p className='font-bold'>Minimum Order:{details.minimumOrder}</p>
                         <p className='font-bold'>Available:{details.available}</p>
                         <div className="card-actions">
-                            <button onClick={() => setPurchase(details)} className="btn btn-primary">Purchase</button>
+
+                            <label for="purchaseModal"
+                                onClick={() => setPurchase(details)}
+                                className="btn btn-primary">Purchase</label>
                         </div>
 
                     </div>
                 </div>
                 {
-                    purchase && <PlaceOrder
+                    purchase && <PurchaseModal
                         purchase={purchase}
                         setPurchase={setPurchase}
-                    ></PlaceOrder>
+                    ></PurchaseModal>
                 }
 
             </div>
