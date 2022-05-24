@@ -18,7 +18,10 @@ const Navbar = () => {
         <li><Link to="/reviews">Reviews</Link></li>
         <li><Link to="/contactUs">Contact Us</Link></li>
         {
-            user && <li><Link to="/dashboard">Dashboard</Link></li>
+            user && <>
+                <li><Link to="/dashboard">Dashboard</Link></li>
+                <li>{user.email}</li>
+            </>
 
         }
         {
