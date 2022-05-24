@@ -12,10 +12,10 @@ const Product = ({ product }) => {
                 <p>{product.des}</p>
                 <p className='font-bold'>Price:{product.price} tk<small>/per unit</small> </p>
                 <div class="card-actions">
-                    <Link to="/purchase"><button class="btn btn-primary">Buy Now</button></Link>
+                    <Link to={`/purchase/${product._id}`}><button class="btn btn-primary">Buy Now</button></Link>
                 </div>
             </div>
-        </div>
+        </div >
     );
 };
 

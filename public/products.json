@@ -6,7 +6,9 @@
         "price": 260,
         "name": "Engine",
         "des": "The engine is the heart of your car. It is a complex machine built to convert heat from burning gas into the force that turns the road wheels",
-        "email": "olsonoliver@zentility.com"
+        "email": "olsonoliver@zentility.com",
+        "minimum-order": "5",
+        "available": "100"
     },
     {
         "id": "2",
@@ -15,7 +17,9 @@
         "price": 300,
         "name": "Alternator",
         "des": "Keep the electric current steady: Not only does your battery provide the energy required to start your car, but it’s also stabilizing the voltage in order to keep your engine running.",
-        "email": "revaclay@zentility.com"
+        "email": "revaclay@zentility.com",
+        "minimum-order": "8",
+        "available": "120"
     },
     {
         "id": "3",
@@ -24,7 +28,9 @@
         "price": 400,
         "name": "Radiator",
         "des": "The fuel supplied to the combustion chamber must be ignited to deliver power. In a spark-ignition engine, an electric spark is used for this purpose. The compression-ignition engine does not require a separate ignition system because the ignition is affected",
-        "email": "shawnsanders@zentility.com"
+        "email": "shawnsanders@zentility.com",
+        "minimum-order": "6",
+        "available": "120"
     },
     {
         "id": "4",
@@ -33,7 +39,9 @@
         "price": 350,
         "name": "Front Axle",
         "des": "The function of a lubricant is to act as a coolant and also as a sealing medium to prevent leakages. Finally, a film of lubricant on the cylinder walls helps the rings in sealing and thus improves the engine’s compressions",
-        "email": "blairjames@zentility.com"
+        "email": "blairjames@zentility.com",
+        "minimum-order": "15",
+        "available": "500"
     },
     {
         "id": "5",
@@ -42,7 +50,9 @@
         "price": 400,
         "name": "Brakes",
         "des": "The Break system is used for changing the direction of the vehicle. The major requirements in any steering mechanism are that it should be precise and easy to handle.",
-        "email": "reedwilliamson@zentility.com"
+        "email": "reedwilliamson@zentility.com",
+        "minimum-order": "10",
+        "available": "150"
     },
     {
         "id": "6",
@@ -51,6 +61,8 @@
         "price": 240,
         "name": "Front Steering and Suspension",
         "des": "A transmission changes gears depending on car speed and accelerator input  so that the engine’s RPM or “revolutions per minute” are kept appropriately low.",
-        "email": "douglaswright@zentility.com"
+        "email": "douglaswright@zentility.com",
+        "minimum-order": "12",
+        "available": "100"
     }
 ]

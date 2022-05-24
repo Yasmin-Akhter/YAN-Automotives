@@ -16,21 +16,19 @@ import MyOrder from './Pages/MyOrder';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App px-12">
 
 
       <Routes>
         <Route path="/" element={<Home></Home>} ></Route>
-        <Route path="/purchase" element={<RequireAuth>
+        {/* <Route path="/purchase" element={<RequireAuth>
           <Purchase></Purchase>
         </RequireAuth>}
-        ></Route>
+        ></Route> */}
         <Route path="/purchase/:id" element={<RequireAuth>
           <Purchase></Purchase>
         </RequireAuth>}
         ></Route>
-
-
         <Route path="/login" element={<Login></Login>} ></Route>
         <Route path="/signup" element={<SignUp></SignUp>} ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>} ></Route>
