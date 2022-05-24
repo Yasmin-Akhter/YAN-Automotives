@@ -13,6 +13,8 @@ import NotFound from './Pages/NotFound';
 import MyProfile from './Pages/MyProfile';
 import AddReview from './Pages/AddReview';
 import MyOrder from './Pages/MyOrder';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -40,6 +42,7 @@ function App() {
         </Route>
         <Route path="*" element={<NotFound></NotFound>} ></Route>
       </Routes>
+      <ToastContainer />
 
     </div>
   );

@@ -1,20 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { toast } from 'react-toastify';
+import auth from '../firebase.init';
 
-const ProfileModal = () => {
+const ProfileModal = ({ updateProfile, setUpdateProfile, setUpdateInfo }) => {
+    const [user, loading] = useAuthState(auth);
+
+    console.log(user);
+
+    const handleProfileModal = e => {
+        e.preventDefault();
+        const email = user.email;
+        const update = {
+            // id: _id,
+            email,
+            name: user.displayName,
+            phone: e.target.phone.value,
+            location: e.target.location.value,
+            link: e.target.link.value
+        }
+        console.log(update);
+
+
+
+        fetch(`http://localhost:5000/user/${email}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(update),
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Success:', data);
+                if (data.success) {
+                    toast('Profile Updated');
+                }
+
+                setUpdateInfo(data.updatedUser);
+                setUpdateProfile(null);
+
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+
+    }
     return (
         <div>
-            {/* <!-- The button to open modal --> */}
 
-
-            {/* <!-- Put this part before </body> tag-- > */}
             <input type="checkbox" id="profileModal" className="modal-toggle" />
             <div className="modal modal-bottom sm:modal-middle">
                 <div className="modal-box">
-                    <h3 className="font-bold text-lg">Congratulations random Interner user!</h3>
-                    <p className="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
-                    <div className="modal-action">
-                        <label for="profileModal" className="btn">Yay!</label>
-                    </div>
+                    <label for="profileModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                    <form onSubmit={handleProfileModal} className='grid grid-cols-1 gap-3 justify-items-center'>
+                        <input type="text" name='name' disabled value={user?.displayName || ''} className="input input-bordered w-full max-w-xs" />
+                        <input type="email" name='email' disabled value={user?.email || ''} className="input input-bordered w-full max-w-xs" />
+                        <input type="number" name='phone' placeholder="Phone Number" className="input input-bordered w-full max-w-xs" />
+                        <input type="text" name='location' placeholder="Location" className="input input-bordered w-full max-w-xs" />
+                        <input type="url" name='link' placeholder="Facebook link" className="input input-bordered w-full max-w-xs" />
+                        <input type="submit" value="UPDATE" className="btn btn-primary w-full max-w-xs" />
+
+                    </form>
+
                 </div>
             </div>
 

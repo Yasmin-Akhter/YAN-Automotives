@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 
 const useToken = user => {
     const [token, setToken] = useState("");
+
     useEffect(() => {
         const email = user?.user?.email;
         const name = user?.user?.displayName;
@@ -20,6 +21,7 @@ const useToken = user => {
             })
                 .then(res => res.json())
                 .then(data => console.log(data))
+
         }
 
     }, [user])
