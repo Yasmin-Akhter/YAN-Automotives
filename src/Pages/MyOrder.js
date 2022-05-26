@@ -28,7 +28,7 @@ const MyOrder = () => {
                         <tr>
 
                             <th>Email</th>
-                            <th>Name</th>
+                            <th>Product</th>
                             <th>Phone</th>
                         </tr>
                     </thead>
@@ -37,7 +37,7 @@ const MyOrder = () => {
                             myOrders.map(order =>
                                 <tr>
                                     <th>{order.email}</th>
-                                    <td>{order.name}</td>
+                                    <td>{order.productName}</td>
                                     <td>{order.phone}</td>
 
                                 </tr>

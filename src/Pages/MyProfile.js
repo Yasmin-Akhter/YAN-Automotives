@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../firebase.init';
 import useToken from '../Hooks/UseToken';
@@ -11,6 +11,13 @@ const MyProfile = () => {
     const [updateProfile, setUpdateProfile] = useState(null);
     const [updatedInfo, setUpdateInfo] = useState({});
 
+    useEffect(() => {
+        fetch(`http://localhost:5000/user-info/${user?.email}`)
+            .then(res => res.json())
+            .then(data => {
+                setUpdateInfo(data);
+            })
+    }, [user])
     if (loading) {
         return <Loading></Loading>
     }
