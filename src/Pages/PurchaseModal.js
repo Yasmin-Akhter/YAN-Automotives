@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useForm } from 'react-hook-form';
+
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 
@@ -12,9 +12,10 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
         e.preventDefault();
         const email = user.email;
         const order = {
-            // id: _id,
+            id: purchase._id,
             productName: e.target.productName.value,
             email,
+            price: purchase.price,
             name: user.displayName,
             phone: e.target.phone.value,
             address: e.target.address.value,
@@ -34,11 +35,7 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
                 console.log('Success:', data);
                 if (data.success) {
                     toast("order placed");
-
-
                 }
-
-
                 setPurchase(null);
 
             })
