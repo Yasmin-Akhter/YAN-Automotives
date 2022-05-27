@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 import Loading from './Loading';
@@ -11,12 +12,14 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?email=${user.email}`, {
-                method: 'GET',
-                headers: {
-                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                }
-            })
+            fetch(`http://localhost:5000/order?email=${user.email}`
+                // , {
+                //     method: 'GET',
+                //     headers: {
+                //         'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+                //     }
+                // }
+            )
 
                 .then(res => res.json())
                 .then(data => setMyOrders(data))
@@ -33,31 +36,29 @@ const MyOrder = () => {
         const confirm = window.confirm('are you sure');
 
         if (confirm) {
-            const newOrder = myOrders.filter(myOrder => myOrder._id !== id);
+            const updatedOrder = [...myOrders];
+            const newOrder = updatedOrder.filter(myOrder => myOrder._id !== id);
             setMyOrders(newOrder);
         }
 
-        // fetch(`http://localhost:5000/order/${user.email}`, {
-        //     method: 'PUT',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(myOrders),
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         setMyOrders(data);
-        //         console.log('Success:', data);
-        //         if (data.success) {
-        //             toast("order updated");
-        //         }
+        fetch(`http://localhost:5000/order/${id}`, {
+            method: 'DELETE'
+
+        })
+            .then(response => response.json())
+            .then(data => {
+                // setMyOrders(data);
+                console.log('Success:', data);
+                if (data.success) {
+                    toast("order updated");
+                }
 
 
 
-        //     })
-        //     .catch((error) => {
-        //         console.error('Error:', error);
-        //     });
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
 
 
     }
@@ -92,7 +93,7 @@ const MyOrder = () => {
                                     <td><button onClick={() => handleDeleteOrder(order._id)} class="btn btn-square btn-outline">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                                     </button></td>
-                                    <tr><button>Payment</button></tr>
+                                    <tr><Link to='/payment'><button class="btn btn-sm mt-5">Payment</button></Link></tr>
 
                                 </tr>
 
