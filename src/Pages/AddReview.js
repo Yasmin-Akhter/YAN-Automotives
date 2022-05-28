@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../firebase.init';
 import Loading from './Loading';
 
 const AddReview = () => {
-    const [addReviews, setAddReviews] = useState({});
+    const [setAddReviews] = useState({});
     const [user, loading] = useAuthState(auth);
 
     if (loading) {

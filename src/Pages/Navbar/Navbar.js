@@ -3,7 +3,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
-import logo from '../../images/logo.png'
+
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
@@ -18,7 +18,7 @@ const Navbar = () => {
 
         <li><Link to="/blogs">Blogs</Link></li>
         <li><Link to="/reviews">Reviews</Link></li>
-        <li><Link to="/contactUs">Contact Us</Link></li>
+        <li><Link to="/about-me">About Me</Link></li>
         {
             user && <>
                 <li><Link to="/dashboard">Dashboard</Link></li>

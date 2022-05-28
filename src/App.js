@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home';
@@ -8,7 +8,7 @@ import Login from './Pages/Login';
 import SignUp from './Pages/SignUp';
 import Blogs from './Pages/Blogs';
 import Dashboard from './Pages/Dashboard';
-import Navbar from './Pages/Navbar/Navbar';
+
 import NotFound from './Pages/NotFound';
 import MyProfile from './Pages/MyProfile';
 import AddReview from './Pages/AddReview';
@@ -16,6 +16,7 @@ import MyOrder from './Pages/MyOrder';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify';
 import ResetPassword from './Pages/ResetPassword';
+import AboutMe from './Pages/AboutMe';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         ></Route>
         <Route path="/login" element={<Login></Login>} ></Route>
         <Route path="/signup" element={<SignUp></SignUp>} ></Route>
+        <Route path="/about-me" element={<AboutMe></AboutMe>} ></Route>
         <Route path="/password-reset" element={<ResetPassword></ResetPassword>} ></Route>
         <Route path="/blogs" element={<Blogs></Blogs>} ></Route>
         <Route path="/dashboard" element={<Dashboard></Dashboard>} >
