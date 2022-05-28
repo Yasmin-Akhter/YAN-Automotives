@@ -1,9 +1,10 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../firebase.init';
 import useToken from '../Hooks/UseToken';
+import Footer from './Footer';
 import Loading from './Loading';
 import Navbar from './Navbar/Navbar';
 
@@ -24,6 +25,7 @@ const SignUp = () => {
 
 
     const navigate = useNavigate();
+
 
     let signInError;
 
@@ -135,6 +137,7 @@ const SignUp = () => {
 
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

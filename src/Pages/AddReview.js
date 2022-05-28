@@ -58,8 +58,9 @@ const AddReview = () => {
                 console.log(data);
                 setAddReviews(data);
                 toast('review added');
-            })
 
+            })
+        e.reset();
 
     }
 

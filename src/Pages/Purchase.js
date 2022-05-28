@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import Footer from './Footer';
 import Navbar from './Navbar/Navbar';
 import PurchaseModal from './PurchaseModal';
 
@@ -49,6 +50,7 @@ const Purchase = () => {
                 }
 
             </div>
+            <Footer></Footer>
         </div >
     );
 };
