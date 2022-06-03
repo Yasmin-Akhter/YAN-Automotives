@@ -15,7 +15,7 @@ const MyOrder = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/order?email=${user.email}`
+            fetch(`https://thawing-mountain-27595.herokuapp.com/order?email=${user.email}`
                 // , {
                 //     method: 'GET',
                 //     headers: {
@@ -45,7 +45,7 @@ const MyOrder = () => {
             setMyOrders(newOrder);
         }
 
-        fetch(`http://localhost:5000/order/${id}`, {
+        fetch(`https://thawing-mountain-27595.herokuapp.com/order/${id}`, {
             method: 'DELETE'
 
         })

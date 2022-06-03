@@ -12,7 +12,7 @@ const Reviews = () => {
 
     useEffect(() => {
         if (user) {
-            fetch('http://localhost:5000/reviews')
+            fetch('https://thawing-mountain-27595.herokuapp.com/reviews')
                 .then(res => res.json())
                 .then(data => setMyReview(data))
 

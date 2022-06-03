@@ -12,7 +12,7 @@ const AddProductModal = () => {
         const available = e.target.available.value;
         const newProduct = { name, price, picture, des, minimumOrder, available };
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://thawing-mountain-27595.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

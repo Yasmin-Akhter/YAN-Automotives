@@ -12,7 +12,7 @@ const MyProfile = () => {
     const [updatedInfo, setUpdateInfo] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/user-info/${user?.email}`)
+        fetch(`https://thawing-mountain-27595.herokuapp.com/user-info/${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setUpdateInfo(data);

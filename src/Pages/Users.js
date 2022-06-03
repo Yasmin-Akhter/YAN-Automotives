@@ -6,7 +6,7 @@ import User from './User';
 const Users = () => {
 
 
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`http://localhost:5000/user`)
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`https://thawing-mountain-27595.herokuapp.com/user`)
         .then(res => res.json()))
 
 

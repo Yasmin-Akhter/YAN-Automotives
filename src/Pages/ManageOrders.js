@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 const ManageOrders = () => {
     const [orders, setOrders] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/order')
+        fetch('https://thawing-mountain-27595.herokuapp.com/order')
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setOrders(data))
     }, [])
     return (
         <div>

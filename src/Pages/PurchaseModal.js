@@ -23,7 +23,7 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
         }
         console.log(order);
 
-        fetch('http://localhost:5000/order', {
+        fetch('https://thawing-mountain-27595.herokuapp.com/order', {
             method: 'POST', // or 'PUT'
             headers: {
                 'Content-Type': 'application/json',

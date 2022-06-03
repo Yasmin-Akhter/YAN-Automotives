@@ -10,7 +10,7 @@ const Purchase = () => {
     const [details, setDetails] = useState({});
     const [purchase, setPurchase] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`
+        const url = `https://thawing-mountain-27595.herokuapp.com/products/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => {

@@ -23,7 +23,7 @@ const ProfileModal = ({ updateProfile, setUpdateProfile, setUpdateInfo }) => {
 
 
 
-        fetch(`http://localhost:5000/user/${email}`, {
+        fetch(`https://thawing-mountain-27595.herokuapp.com/user/${email}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',

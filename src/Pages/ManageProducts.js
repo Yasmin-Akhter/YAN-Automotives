@@ -7,7 +7,7 @@ import Loading from './Loading';
 const ManageProducts = () => {
     const [manageProducts, setManageProducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://thawing-mountain-27595.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setManageProducts(data))
     }, [])
