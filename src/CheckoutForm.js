@@ -1,15 +1,15 @@
 import React from 'react';
-// import { CardElement, useStripe } from '@stripe/react-stripe-js';
+import { CardElement, useStripe } from '@stripe/react-stripe-js';
 
 const CheckoutForm = () => {
-    // const stripe = useStripe()
+    const stripe = useStripe()
 
     const handleSubmit = e => {
         e.preventDefault();
     }
     return (
         <form onSubmit={handleSubmit}>
-            {/* {/* <CardElement
+            <CardElement
                 options={{
                     style: {
                         base: {
@@ -24,12 +24,12 @@ const CheckoutForm = () => {
                         },
                     },
                 }}
-            /> 
+            />
             <button type="submit" disabled={!stripe}>
                 Pay
-            </button> */}
+            </button>
 
-            <input type="text" />
+
         </form>
     );
 };
