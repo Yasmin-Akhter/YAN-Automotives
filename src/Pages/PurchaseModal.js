@@ -33,7 +33,7 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
             .then(response => response.json())
             .then(data => {
                 console.log('Success:', data);
-                if (data.success) {
+                if (data.acknowledged) {
                     toast("order placed");
                 }
                 setPurchase(null);
@@ -46,10 +46,10 @@ const PurchaseModal = ({ purchase, setPurchase }) => {
 
     return (
         <div>
-            <input type="checkbox" id="purchaseModal" class="modal-toggle" />
-            <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                    <label for="purchaseModal" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+            <input type="checkbox" id="purchaseModal" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+                <div className="modal-box">
+                    <label htmlFor="purchaseModal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
                     <form onSubmit={handlePurchaseModal} className='grid grid-cols-1 gap-3 justify-items-center'>
 
                         <input type="text" name='productName' disabled value={purchase.name} className="input input-bordered w-full max-w-xs font-bold" />

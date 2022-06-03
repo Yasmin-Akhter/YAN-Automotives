@@ -31,79 +31,19 @@ const Reviews = () => {
             <div className='grid grid-cols-1 lg:grid-cols-3  gap-3'>
 
                 {
-                    myReview.map(review => {
+                    myReview.map(review =>
                         <div className="card w-72 bg-base-100 shadow-xl">
-                            <div className="avatar p-2 justify-center">
-
-                                <div className="w-24 rounded">
-                                    <img src="https://api.lorem.space/image/face?hash=92048" alt='' />
-                                </div>
-
-                            </div>
                             <div className="card-body">
-
-                                {review.rating}
-                                <p>{review.des}</p>
+                                <p className='font-bold'>Rating:{review.rating} out of 5</p>
+                                <p className='text-left'>{review.comment}</p>
                                 <div className="card-actions justify-end">
-                                    <p className='font-bold'>{user.displayName}</p>
-
+                                    <p className='font-bold'>{review.email}</p>
                                 </div>
                             </div>
                         </div>
-                    })
+                    )
                 }
-                <div className="card w-72 bg-base-100 shadow-xl">
-                    <div className="avatar p-2 justify-center">
 
-                        <div className="w-24 rounded">
-                            <img src="https://api.lorem.space/image/face?hash=92048" />
-
-
-                        </div>
-
-                    </div>
-                    <div className="card-body">
-
-                        <div className=''>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStarHalfAlt}></FontAwesomeIcon>
-                        </div>
-                        <p>Amazing customer support and fantastic products to showcase your reviews on your website.Highly recommended</p>
-                        <div className="card-actions justify-end">
-                            <p className='font-bold'>Sakib Al Hasan</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div className="card w-72 bg-base-100 shadow-xl">
-                    <div className="avatar p-2 justify-center">
-
-                        <div className="w-24 rounded">
-                            <img src="https://api.lorem.space/image/face?hash=92048" />
-
-
-                        </div>
-
-                    </div>
-                    <div className="card-body">
-
-                        <div className=''>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStar}></FontAwesomeIcon>
-                            <FontAwesomeIcon className='text-orange-400' icon={faStarHalfAlt}></FontAwesomeIcon>
-                        </div>
-                        <p>Amazing customer support and fantastic products to showcase your reviews on your website.Highly recommended</p>
-                        <div className="card-actions justify-end">
-                            <p className='font-bold'>Sakib Al Hasan</p>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     );

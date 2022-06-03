@@ -5,7 +5,7 @@ import auth from '../firebase.init';
 import Loading from './Loading';
 
 const AddReview = () => {
-    const [setAddReviews] = useState({});
+    const [addReview, setAddReviews] = useState({});
     const [user, loading] = useAuthState(auth);
 
     if (loading) {
@@ -13,12 +13,12 @@ const AddReview = () => {
     }
     // useEffect(() => {
     //     const reviews = {
-    //         faStar: <div class="rating rating-sm">
-    //             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-    //             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" checked />
-    //             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-    //             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
-    //             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+    //         faStar: <div className="rating rating-sm">
+    //             <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
+    //             <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" checked />
+    //             <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
+    //             <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
+    //             <input type="radio" name="rating-6" className="mask mask-star-2 bg-orange-400" />
     //         </div>,
     //         name: user.displayName,
     //     }
@@ -41,9 +41,11 @@ const AddReview = () => {
 
     const handleReview = e => {
         e.preventDefault();
+        const email = user.email;
+        const name = user.displayName;
         const rating = e.target.rating.value;
         const comment = e.target.comment.value;
-        const review = { rating, comment };
+        const review = { rating, comment, email, name };
         console.log(review);
 
         fetch('http://localhost:5000/reviews', {
@@ -60,7 +62,7 @@ const AddReview = () => {
                 toast('review added');
 
             })
-        e.reset();
+        e.target.reset();
 
     }
 
@@ -69,16 +71,11 @@ const AddReview = () => {
             <h1 className='text-3xl my-12'>Add Reviews</h1>
 
             <form onSubmit={handleReview} className='grid grid-cols-1 gap-3 w-1/2 mx-auto'>
-                <div class="rating rating-md mx-auto">
-                    <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" />
-                    <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" checked />
-                    <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" />
-                    <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" />
-                    <input type="radio" name="rating" class="mask mask-star-2 bg-orange-400" />
-                </div>
-                <textarea class="textarea textarea-bordered" name='comment' placeholder="Your Comment"></textarea>
-                <input type="text" disabled class="input input-bordered w-full " value={user.displayName} />
-                <input type="submit" class="btn btn-primary" value="Submit" />
+
+                <input type="number" className="input input-bordered w-full " name="rating" placeholder='Ratings' />
+                <textarea className="textarea textarea-bordered" name='comment' placeholder="Your Comment"></textarea>
+                <input type="text" disabled className="input input-bordered w-full " value={user.displayName} />
+                <input type="submit" className="btn btn-primary" value="Submit" />
             </form >
 
 

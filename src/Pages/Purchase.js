@@ -35,7 +35,7 @@ const Purchase = () => {
                         <p className='font-bold'>Available:{details.available}</p>
                         <div className="card-actions">
 
-                            <label for="purchaseModal"
+                            <label htmlFor="purchaseModal"
                                 onClick={() => setPurchase(details)}
                                 className="btn btn-primary">Purchase</label>
                         </div>

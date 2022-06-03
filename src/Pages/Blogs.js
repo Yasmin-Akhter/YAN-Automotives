@@ -4,7 +4,7 @@ import Navbar from './Navbar/Navbar';
 
 const Blogs = () => {
     return (
-        <div>
+        <div className='grid grid-cols-1'>
             <Navbar></Navbar>
             <div className='text-left my-12'>
                 <div>

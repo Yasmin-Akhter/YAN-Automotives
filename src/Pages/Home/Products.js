@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ManageProducts from '../ManageProducts';
 import Product from './Parts/Product';
 
 const Products = () => {
@@ -14,10 +15,17 @@ const Products = () => {
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-3'>
                 {
                     products.map(product => <Product
+                        key={product._id}
                         product={product}
                     ></Product>)
                 }
             </div>
+            {/* {
+                products && <ManageProducts
+                    products={products}
+                    setProducts={setProducts}
+                ></ManageProducts>
+            } */}
         </div>
     );
 };

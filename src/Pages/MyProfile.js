@@ -41,7 +41,7 @@ const MyProfile = () => {
                     <p>{updatedInfo.link}</p>
                     <div className="card-actions justify-center">
 
-                        <label for="profileModal" onClick={() => setUpdateProfile(user)} className="btn btn-primary">Update Profile</label>
+                        <label htmlFor="profileModal" onClick={() => setUpdateProfile(user)} className="btn btn-primary">Update Profile</label>
                     </div>
                 </div>
             </div>
