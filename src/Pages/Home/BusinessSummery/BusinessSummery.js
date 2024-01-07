@@ -5,8 +5,8 @@ import Charts from './Charts';
 
 const BusinessSummery = () => {
     return (
-        <div>
-            <div className=" grid grid-cols-4 border-2 rounded-md">
+        <div className='my-36'>
+            <div className=" grid grid-cols-4 rounded-md">
                 <div className="grid grid-cols-1 bg-blue-900 text-white p-3 rounded-l-md">
                     <div> <FontAwesomeIcon className='h-7' icon={faEye} ></FontAwesomeIcon>
                         <h1 className='text-xl font-bold'>Company's Vision</h1>

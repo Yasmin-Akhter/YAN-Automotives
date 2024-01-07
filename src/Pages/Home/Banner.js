@@ -1,20 +1,26 @@
 import React from 'react';
+import Navbar from '../Navbar/Navbar';
 // import './style.css';
 
 const Banner = () => {
     return (
-        <div className='banner h-[500px]  bg-no-repeat md:bg-contain shadow-xl grid grid-cols-1 text-clip overflow-hidden'
+        <div className='banner h-[500px]  bg-no-repeat md:bg-contain  grid grid-cols-1 text-clip overflow-hidden relative'
             style={{
 
-                backgroundImage: `url("https://media.ford.com/content/dam/fordmedia/North%20America/US/2017/09/21/HoloLensLoop.gif")`,
+                backgroundImage: `url("http://s3.amazonaws.com/gt7sp-prod/livery/37/91/97/5909387985045979137_23.jpg")`,
                 backgroundSize: 'cover',
 
             }}>
+            <div className='text-white mb-5'>
+                <Navbar />   
+            </div>
+           
 
 
-            <h1 className='text-2xl lg:text-7xl font-serif text-purple-400 pt-12 px-6 text-left leading-relaxed'>WE ARE EXPERTS IN <br />
-                AUTOMOTIVE PRODUCTS</h1>
-            <p className='text-purple-400 py-6 text-left text-lg lg:text-xl w-1/2 px-6'>We are committed to supplying our customers with robust automotive components and reliable services through our international commercial and production network</p>
+            <div className='flex items-center absolute top-20 left-15'>
+                <h1 className='text-2xl lg:text-4xl font-serif text-white leading-relaxed font-bold pt-5'>Stunning Design, Powerful Features, Easy to use and customize</h1>
+
+            </div>
 
         </div >
     );

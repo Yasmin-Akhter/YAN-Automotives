@@ -13,13 +13,12 @@ import Reviews from './Reviews';
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
             <Banner></Banner>
             {/* <Parts></Parts> */}
             <Products></Products>
             <OurLocations></OurLocations>
             <BusinessSummery></BusinessSummery>
-            <Reviews></Reviews>
+            {/* <Reviews></Reviews> */}
             <NewsLetter></NewsLetter>
             <Footer></Footer>
         </div>

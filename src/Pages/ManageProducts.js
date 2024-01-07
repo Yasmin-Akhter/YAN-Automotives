@@ -7,7 +7,7 @@ import Loading from './Loading';
 const ManageProducts = () => {
     const [manageProducts, setManageProducts] = useState([]);
     useEffect(() => {
-        fetch('https://thawing-mountain-27595.herokuapp.com/products')
+        fetch('https://yan-auto-server.onrender.com/products')
             .then(res => res.json())
             .then(data => setManageProducts(data))
     }, [])
